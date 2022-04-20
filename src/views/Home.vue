@@ -2,6 +2,7 @@
   <div class="home">
     <!-- TODO: Implement the home page -->
     <h1>Home Page</h1>
+    <b-button>Bootstrap Installed</b-button>
   </div>
 </template>
 

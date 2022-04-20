@@ -10,7 +10,7 @@
 import QuestionCard from "@/components/QuestionCard.vue";
 
 export default {
-  name: "Home",
+  name: "Questionnaire",
   computed: {
     setId() {
       return this.$route.params.setId;
