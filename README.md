@@ -1,4 +1,4 @@
-# Vue.js PWA
+# goal-diggers-project
 
 ## Project setup
 ```
