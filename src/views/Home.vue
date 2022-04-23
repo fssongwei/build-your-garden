@@ -10,22 +10,29 @@
         <div class="col-md-4 col-md-offset-2">
           <button type="button" class="btn btn-info btn-circle btn-lg"
           @click="quest()">Step 1</button>
+          <p>Begin</p>
           </div>
       </div>
 
       <div class="row">
         <div class="col-md-4 col-md-offset-5"><button type="button" class="btn btn-info btn-circle btn-lg"
-        @click="quest()">Step 2</button></div>
+        @click="quest()">Step 2</button>
+        <p>Garden logistics</p>
+        </div>
       </div>
 
       <div class="row">
         <div class="col-md-4 col-md-offset-3"><button type="button" class="btn btn-info btn-circle btn-lg"
-        @click="recom()">Step 3</button></div>
+        @click="recom()">Step 3</button>
+        <p>See plant list</p>
+        </div>
       </div>
 
       <div class="row">
         <div class="col-md-4 col-md-offset-6"><button type="button" class="btn btn-info btn-circle btn-lg"
-        @click="garden()">Step 4</button></div>
+        @click="garden()">Step 4</button>
+        <p>See Your Garden</p>
+        </div>
       </div>
 
 
