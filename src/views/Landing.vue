@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <!-- TODO: Implement the landing page -->
     <h1>Landing Page</h1>
     <flower-mascot />

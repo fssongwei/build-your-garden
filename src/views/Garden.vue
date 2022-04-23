@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <!-- TODO: Implement the Garden page -->
     <h1>Garden Page</h1>
     <flower-mascot />

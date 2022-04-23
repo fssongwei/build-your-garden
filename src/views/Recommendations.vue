@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <!-- TODO: Implement the recommendation page -->
     <h1>Recommendations Page</h1>
     <plant-card />

@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="container">
     <!-- TODO: Implement the home page -->
     <h1>Home Page</h1>
     <b-button>Bootstrap Installed</b-button>
