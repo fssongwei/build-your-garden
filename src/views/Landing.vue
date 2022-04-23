@@ -9,7 +9,14 @@
       </b-row>
 
       <b-row class="mx-4">
-        <b-col class="p-2" align-self="stretch">
+        <b-col cols=4>
+          <div style="border: 2px solid black; border-radius: 25px; box-shadow: 2px 2px 2px 1.5px #B6B6B6; margin-left: 60px; margin-top: 10px; width: 100%; height: 140px">
+            <h5 style="margin-top: 20px; text-align: center;">Hello!</h5>
+            <p style="padding:1px; text-align: center;">My name is Flory. <br> Nice to meet you!</p>
+          </div>
+        </b-col>
+        <b-col cols=1></b-col>
+        <b-col class="mx-4 px-1" cols=5>
           <flower-mascot/>
         </b-col>
       </b-row>
