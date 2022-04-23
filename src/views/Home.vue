@@ -7,14 +7,14 @@
   <b-container class="bv-grid-row">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-4 col-md-offset-3">
+        <div class="col-md-4 col-md-offset-2">
           <button type="button" class="btn btn-info btn-circle btn-lg"
           @click="quest()">Step 1</button>
           </div>
       </div>
 
       <div class="row">
-        <div class="col-md-4 col-md-offset-6"><button type="button" class="btn btn-info btn-circle btn-lg"
+        <div class="col-md-4 col-md-offset-5"><button type="button" class="btn btn-info btn-circle btn-lg"
         @click="quest()">Step 2</button></div>
       </div>
 
@@ -68,12 +68,18 @@ export default {
   display: inline;
   float:left;
 }
+.col-md-offset-3 {
+    margin-left: 25%;
+  }
+.col-md-offset-5 {
+    margin-left: 42.66%;
+  }
 .col-md-offset-6 {
     margin-left: 50%;
   }
 
- .col-md-offset-3 {
-    margin-left: 25%;
+ .col-md-offset-2 {
+    margin-left: 16.66%;
   }
 .right{
   float:right;
