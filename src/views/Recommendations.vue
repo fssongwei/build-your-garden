@@ -9,6 +9,12 @@
       <plant-card plantName="Hibiscus"/>
       <plant-card plantName="Petunia"/>
     </b-row>
+    <b-row class="my-2">
+      <b-col> <b-button pill variant="dark" size="lg">+</b-button> </b-col>
+      <b-col></b-col>
+      <b-col></b-col>
+      <b-col> <b-button variant="outline-dark" @click="$router.push('/garden')">See Garden</b-button> </b-col>
+    </b-row>
   </b-container>
 </template>
 
