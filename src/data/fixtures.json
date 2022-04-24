@@ -1,7 +1,42 @@
 {
-    "plantData": [
-        "flower",
-        "trees",
-        "grass"
-    ]
+    "plantList": {
+        "Yarrow": {
+            "name": "Yarrow",
+            "descripion": "As with most herbs, full sunlight is best. Plant it in a large pot on a very sunny patio and monitor the water situation carefully. Monitor and cut back as necessary to prevent spreading.",
+            "image": "@/plantImages/yarrow.png",
+            "edible": "Yes",
+            "scent": "Fragrant",
+            "color": "Purple, pink, white",
+            "cost": "Inexpensive"
+        },
+        "Thyme": {
+            "name": "Thyme",
+            "descripion": "Plant thyme in spring once chances of frost have passed. Space thyme plants 12 to 24 inches apart in a very sunny area with fertile, well-drained soil with a pH close to 7.0. For best results, feed regularly with a water-soluble plant food. Keep soil moist and water when the top inch of soil becomes dry.",
+            "image": "@/plantImages/thyme.png",
+            "edible": "Yes",
+            "scent": "Fragrant",
+            "color": "Green",
+            "cost": "Inexpensive"
+        },
+        "Primrose": {
+            "name": "Primrose",
+            "descripion": "Primrose perennials should be planted in lightly shaded areas with well-drained soil, preferably amended with organic matter. Set primrose plants about 6 to 12 inches (15-30 cm.) apart and 4 to 6 inches (10-15 cm.) deep. Water thoroughly after planting.",
+            "image": "@/plantImages/primrose.png",
+            "edible": "Yes",
+            "scent": "Fragrant",
+            "color": "Various (Yellow, blue, pink, etc)",
+            "cost": "Inexpensive"
+        },
+        "Columbine": {
+            "name": "Columbine",
+            "descripion": "Only weekly watering is necessary with exception to extended periods of drought in which they will require additional watering. Provide a water-soluble fertilizer monthly. Regular fertilizing will help produce brighter blooms and thicker foliage. Regular deadheading can also be performed to encourage additional blooming.",
+            "image": "@/plantImages/columbine.png",
+            "edible": "Yes",
+            "scent": "N/A",
+            "color": "Purple and white",
+            "cost": "Inexpensive"
+        }
+
+
+    }
 }
