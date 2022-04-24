@@ -1,0 +1,65 @@
+{
+    "set1": [
+        {
+            "question": "What are your color preferences for plants?",
+            "type": "color"
+        },
+        {
+            "question": "What percent of your garden plants should be fragrant?",
+            "type": "slider"
+        },
+        {
+            "question": "What percent of your garden should be edible?",
+            "type": "slider"
+        }
+    ],
+    "set2": [
+        {
+            "question": "Where is your garden going to be located?",
+            "type": "location"
+        },
+        {
+            "question": "What is the approximate size of your garden?",
+            "type": "radio",
+            "options": [
+                "0 - 100 sq ft",
+                "100 - 200 sq ft",
+                "200 - 500 sq ft",
+                "500 sq ft +"
+            ]
+        },
+        {
+            "question": "How often are you able and willing to maintain your garden?",
+            "type": "radio",
+            "options": [
+                "daily",
+                "weekly",
+                "monthly",
+                "rarely"
+            ]
+        },
+        {
+            "question": "What tools and equipment will you have?",
+            "type": "checkbox",
+            "options": [
+                "Wheelbarrows",
+                "Garden Carts",
+                "Pruning Shears",
+                "Grass Shears",
+                "Hedge Shears",
+                "Shovels",
+                "Axes"
+            ]
+        },
+        {
+            "question": "What is your budget for your garden?",
+            "type": "radio",
+            "options": [
+                "$0 - $499",
+                "$500 - $ 999",
+                "$1000 - $1499",
+                "$1500 +"
+            ]
+        }
+    ]
+}

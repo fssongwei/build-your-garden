@@ -1,38 +1,64 @@
 <template>
-  <!-- <div style="width: 100%" class="question-card">
-    <h2>Q1: What are your color preferences for plants</h2>
-    <b-radio> Test Option 1</b-radio>
-    <b-radio> Test Option 2</b-radio>
-    <b-radio> Test Option 3</b-radio>
-    <b-radio> Test Option 4</b-radio>
-  </div> -->
-  <b-card header="Quesion 1" :title="question">
-    <b-card-text>
-      <b-radio> Test Option 1</b-radio>
-      <b-radio> Test Option 2</b-radio>
-      <b-radio> Test Option 3</b-radio>
-      <b-radio> Test Option 4</b-radio>
-    </b-card-text>
+  <b-card :header="`Question ${id}`" :title="question" class="question-card">
+    <div class="question-card-body">
+      <color-picker v-if="type === 'color'" />
+      <slider v-if="type === 'slider'" />
+      <location-picker v-if="type === 'location'" />
+      <radio-group v-if="type === 'radio'" :options="options" />
+      <checkbox-group v-if="type === 'checkbox'" :options="options" />
+    </div>
   </b-card>
 </template>
 
 <script>
+import ColorPicker from "@/components/ColorPicker.vue";
+import Slider from "@/components/Slider.vue";
+import LocationPicker from "@/components/LocationPicker.vue";
+import RadioGroup from "@/components/RadioGroup.vue";
+import CheckboxGroup from "@/components/CheckboxGroup.vue";
+
 export default {
   name: "QuestionCard",
   props: {
     question: {
       type: String,
-      default: "What are your color preferences for plants",
+      default: "",
     },
+    id: {
+      type: Number,
+      default: 0,
+    },
+    type: {
+      type: String,
+    },
+    options: {
+      type: Array,
+    },
+  },
+  components: {
+    ColorPicker,
+    Slider,
+    LocationPicker,
+    RadioGroup,
+    CheckboxGroup,
   },
 };
 </script>
 
-<style scoped>
-/* .question-card {
-  width: 100%;
-  border: 2px solid grey;
-  border-radius: 5px;
-  padding: 50px;
-} */
+<style sc LocationPickeroped>
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+.question-card {
+  height: 400px;
+  display: flex;
+}
+
+.question-card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
 </style>
