@@ -12,8 +12,9 @@
           variant="outline-dark"
           size="lg"
           @click="$router.push('/garden')"
-          >See Garden</b-button
         >
+          See Garden
+        </b-button>
       </b-col>
     </b-row>
   </div>

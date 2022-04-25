@@ -45,7 +45,7 @@ export default {
         slidesPerView: "auto",
         centeredSlides: true,
         spaceBetween: 40,
-        allowTouchMove: false,
+        // allowTouchMove: false,
         preventClicks: false,
       },
       currentQuestionId: parseInt(this.$route.params.questionId),

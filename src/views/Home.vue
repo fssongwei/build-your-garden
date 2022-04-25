@@ -3,42 +3,62 @@
     <!-- TODO: Implement the home page -->
     <h1>Home</h1>
 
-
-  <b-container class="bv-grid-row">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-4 col-md-offset-2">
-          <button type="button" class="btn btn-info btn-circle btn-lg"
-          @click="quest()">Step 1</button>
-          <p>Begin</p>
+    <b-container class="bv-grid-row">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4 col-md-offset-2">
+            <button
+              type="button"
+              class="btn btn-info btn-circle btn-lg"
+              @click="$router.push('/questions/set1/1')"
+            >
+              Step 1
+            </button>
+            <p>Plant Traits</p>
           </div>
-      </div>
+        </div>
 
-      <div class="row">
-        <div class="col-md-4 col-md-offset-5"><button type="button" class="btn btn-info btn-circle btn-lg"
-        @click="quest()">Step 2</button>
-        <p>Garden logistics</p>
+        <div class="row">
+          <div class="col-md-4 col-md-offset-5">
+            <button
+              type="button"
+              class="btn btn-info btn-circle btn-lg"
+              @click="$router.push('/questions/set2/1')"
+            >
+              Step 2
+            </button>
+            <p>Garden logistics</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 col-md-offset-3">
+            <button
+              type="button"
+              class="btn btn-info btn-circle btn-lg"
+              @click="$router.push('/recommendations')"
+            >
+              Step 3
+            </button>
+            <p>See plant list</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 col-md-offset-6">
+            <button
+              type="button"
+              class="btn btn-info btn-circle btn-lg"
+              @click="$router.push('/garden')"
+            >
+              Step 4
+            </button>
+            <p>See Your Garden</p>
+          </div>
         </div>
       </div>
-
-      <div class="row">
-        <div class="col-md-4 col-md-offset-3"><button type="button" class="btn btn-info btn-circle btn-lg"
-        @click="recom()">Step 3</button>
-        <p>See plant list</p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-4 col-md-offset-6"><button type="button" class="btn btn-info btn-circle btn-lg"
-        @click="garden()">Step 4</button>
-        <p>See Your Garden</p>
-        </div>
-      </div>
-
-
-    </div>
-</b-container>
-</div>
+    </b-container>
+  </div>
 </template>
 
 <script>
@@ -47,49 +67,38 @@
 export default {
   name: "Home",
   components: {},
-  methods:{
-    quest(){
-      this.$router.push({
-        path:"/Questionnaire",
-      })
-    },
-    recom(){
-      this.$router.push({
-        path:"/Recommendation",
-      })
-    },
-    garden(){
-      this.$router.push({
-        path:"/Garden",
-      })
-    },
-  }
+  mounted() {
+    if (window.sessionStorage.getItem("visited") === null) {
+      window.sessionStorage.visited = true;
+      this.$router.push("/landing");
+    }
+  },
 };
 </script>
 
 <style>
-.col-md-4{
+.col-md-4 {
   float: right;
 }
-.left{
+.left {
   display: inline;
-  float:left;
+  float: left;
 }
 .col-md-offset-3 {
-    margin-left: 25%;
-  }
+  margin-left: 25%;
+}
 .col-md-offset-5 {
-    margin-left: 42.66%;
-  }
+  margin-left: 42.66%;
+}
 .col-md-offset-6 {
-    margin-left: 50%;
-  }
+  margin-left: 50%;
+}
 
- .col-md-offset-2 {
-    margin-left: 16.66%;
-  }
-.right{
-  float:right;
+.col-md-offset-2 {
+  margin-left: 16.66%;
+}
+.right {
+  float: right;
 }
 .btn-circle {
   width: 30px;
