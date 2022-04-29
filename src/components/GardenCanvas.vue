@@ -10,6 +10,7 @@
 
         <v-image
           v-for="(plant, index) in list"
+          @click="handleClick(plant.name)"
           :key="index"
           :config="{
             image: plantImages[plant.name],
@@ -29,7 +30,7 @@
 import plantData from "@/data/fixtures.json";
 const width = 540;
 const height = 360;
-const nPlants = 30;
+// const nPlants = 30;
 const plantSize = 50;
 
 export default {
@@ -42,9 +43,15 @@ export default {
       plantImages: [],
       testFlower: null,
       list: [],
+      recommendations: [],
     };
   },
   created() {
+    let storedRecList = sessionStorage.getItem("recommendations");
+    if (storedRecList) {
+      this.recommendations = JSON.parse(storedRecList);
+    }
+
     const bg = new window.Image();
     bg.src = "/img/garden/gardenbg.jpg";
     bg.onload = () => {
@@ -62,13 +69,15 @@ export default {
         this.plantImages = { ...this.plantImages, [plant]: plantImg };
       };
     }
-
-    this.list = new Array(nPlants).fill(0).map(() => {
-      const x = Math.floor(Math.random() * (width - plantSize));
-      const y = Math.floor(Math.random() * (height - 200 - plantSize) + 200);
-      const name = plantList[Math.floor(Math.random() * plantList.length)];
-      return { x, y, name };
-    });
+    let list = [];
+    for (let { name, quantity } of this.recommendations) {
+      for (let i = 0; i < quantity; i++) {
+        let x = Math.floor(Math.random() * (width - plantSize));
+        let y = Math.floor(Math.random() * (height - 200 - plantSize) + 200);
+        list.push({ x, y, name: name.toLowerCase() });
+      }
+    }
+    this.list = list;
   },
   mounted() {
     const stage = this.$refs.stage.getStage();
@@ -82,6 +91,28 @@ export default {
     }
     resize();
     window.addEventListener("resize", resize);
+  },
+  methods: {
+    handleDragStart() {
+      this.isDragging = true;
+    },
+    handleDragEnd() {
+      this.isDragging = false;
+    },
+    handleClick(name) {
+      this.$emit("click-plant", name);
+    },
+    downloadImage() {
+      var imageData = this.$refs.stage.getStage().toDataURL({ pixelRatio: 3 });
+
+      // download file
+      let aLink = document.createElement("a");
+      aLink.download = "garden.png";
+      aLink.href = imageData;
+      document.body.appendChild(aLink);
+      aLink.click();
+      document.body.removeChild(aLink);
+    },
   },
 };
 </script>

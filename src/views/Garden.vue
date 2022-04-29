@@ -1,7 +1,29 @@
 <template>
   <div class="container">
-    <garden-canvas></garden-canvas>
-    <flower-mascot />
+    <garden-canvas
+      @click-plant="handlePlantClick"
+      ref="garden-canvas"
+    ></garden-canvas>
+
+    <div
+      class="d-flex justify-content-end align-items-end px-lg-5 px-md-4 px-3 py-4 position-relative"
+      style="z-index: -1; box-sizing: border-box"
+    >
+      <div
+        class="position-absolute"
+        style="bottom: 0; left: 0; padding: inherit"
+      >
+        <b-button
+          size="lg"
+          variant="primary"
+          @click="$router.push('/recommendations')"
+        >
+          &lt; See List
+        </b-button>
+      </div>
+
+      <flower-mascot :text="plantDescription" />
+    </div>
   </div>
 </template>
 
@@ -16,5 +38,33 @@ export default {
     FlowerMascot,
     GardenCanvas,
   },
+  data() {
+    return {
+      selectedPlant: null,
+    };
+  },
+  computed: {
+    plantDescription() {
+      if (this.selectedPlant) {
+        return `There will be some description about ${this.selectedPlant}`;
+      }
+      return null;
+    },
+  },
+  methods: {
+    handlePlantClick(name) {
+      this.selectedPlant = name;
+    },
+  },
 };
 </script>
+
+<style scoped>
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+</style>

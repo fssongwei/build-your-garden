@@ -42,7 +42,6 @@ export default {
   },
   methods: {
     handleLocationChange(e) {
-      console.log(e);
       this.initLocation = e;
     },
   },

@@ -18,12 +18,14 @@
     <div class="container nav-btn-container">
       <div class="swiper-slide nav-btn-group">
         <span>
-          <b-button @click="prev" v-if="currentQuestionId !== 1">←</b-button>
+          <b-button @click="prev">{{
+            questionId === 1 ? "Last Step" : "←"
+          }}</b-button>
         </span>
-        <span> {{ currentQuestionId }} / {{ questions.length }}</span>
+        <span> {{ questionId }} / {{ questions.length }}</span>
         <span>
           <b-button @click="next">{{
-            currentQuestionId === questions.length ? "Next Step" : "→"
+            questionId === questions.length ? "Next Step" : "→"
           }}</b-button>
         </span>
       </div>
@@ -45,70 +47,71 @@ export default {
         slidesPerView: "auto",
         centeredSlides: true,
         spaceBetween: 40,
-        // allowTouchMove: false,
+        allowTouchMove: false,
         preventClicks: false,
       },
-      currentQuestionId: parseInt(this.$route.params.questionId),
+      questionId: parseInt(this.$route.params.questionId),
+      setId: parseInt(this.$route.params.setId),
     };
   },
   computed: {
-    setId() {
-      return this.$route.params.setId;
-    },
-    questionId() {
-      return this.$route.params.questionId;
-    },
     swiper() {
       return this.$refs.mySwiper.$swiper;
     },
     questions() {
       return questions[`set${this.setId}`];
     },
+    isUpdated() {
+      return `${this.$route.params.questionId}/${this.$route.params.setId}`;
+    },
   },
   methods: {
     next() {
-      if (this.currentQuestionId === this.questions.length) {
-        if (this.setId === "1") {
-          this.$router.push({
-            name: this.$router.currentRoute.name,
-            params: { setId: 2, questionId: 1 },
-          });
-          this.currentQuestionId = 1;
-          this.swiper.slideTo(0, 1000, false);
+      if (this.questionId === this.questions.length) {
+        if (this.setId === 1) {
+          this.$router.push("/questions/set2/1");
         } else {
           this.$router.push("/recommendations");
         }
         return;
       }
 
-      let oldQuestionId = parseInt(this.swiper.realIndex) + 1;
-      this.swiper.slideNext();
-      let newQuestionId = parseInt(this.swiper.realIndex) + 1;
-      if (oldQuestionId !== newQuestionId) {
-        this.$router.push({
-          name: this.$router.currentRoute.name,
-          params: { questionId: newQuestionId },
-        });
-        this.currentQuestionId = newQuestionId;
-      }
+      this.$router.push({
+        name: this.$router.currentRoute.name,
+        params: {
+          questionId: this.questionId + 1,
+        },
+      });
     },
     prev() {
-      let oldQuestionId = parseInt(this.swiper.realIndex) + 1;
-      this.swiper.slidePrev();
-      let newQuestionId = parseInt(this.swiper.realIndex) + 1;
-      if (oldQuestionId !== newQuestionId) {
-        this.$router.push({
-          name: this.$router.currentRoute.name,
-          params: { questionId: newQuestionId },
-        });
-        this.currentQuestionId = newQuestionId;
+      if (this.questionId === 1) {
+        if (this.setId === 1) {
+          this.$router.push("/");
+        } else {
+          this.$router.push("/questions/set1/3");
+        }
+        return;
       }
+
+      this.$router.push({
+        name: this.$router.currentRoute.name,
+        params: {
+          questionId: this.questionId - 1,
+        },
+      });
+      // this.swiper.slidePrev();
     },
   },
   components: { QuestionCard, Swiper, SwiperSlide },
   mounted() {
-    console.log("Current Swiper instance object", this.swiper);
-    this.swiper.slideTo(parseInt(this.currentQuestionId) - 1, 1000, false);
+    this.swiper.slideTo(parseInt(this.questionId) - 1, 1000, false);
+  },
+  watch: {
+    isUpdated() {
+      this.setId = parseInt(this.$route.params.setId);
+      this.questionId = parseInt(this.$route.params.questionId);
+      this.swiper.slideTo(parseInt(this.questionId) - 1, 1000, false);
+    },
   },
 };
 </script>

@@ -1,11 +1,21 @@
 <template>
   <div id="app">
-    <b-navbar type="light" variant="light" class="px-4">
-      <b-navbar-brand>
-        <b-button v-b-toggle.sidebar-1><b-icon-list></b-icon-list></b-button>
-      </b-navbar-brand>
+    <b-navbar
+      type="light"
+      variant="light"
+      class="px-4 d-flex justify-content-between"
+    >
+      <div class="d-flex align-items-center">
+        <b-navbar-brand>
+          <b-button v-b-toggle.sidebar-1><b-icon-list></b-icon-list></b-button>
+        </b-navbar-brand>
 
-      <b-navbar-brand>{{ currentHeading }}</b-navbar-brand>
+        <b-navbar-brand>{{ currentHeading }}</b-navbar-brand>
+      </div>
+
+      <b-button v-show="showShareBtn" @click="share"
+        ><b-icon icon="box-arrow-up"></b-icon
+      ></b-button>
     </b-navbar>
     <div>
       <b-sidebar id="sidebar-1" title="AppName" shadow>
@@ -24,7 +34,7 @@
         </div>
       </b-sidebar>
     </div>
-    <router-view />
+    <router-view ref="view" />
   </div>
 </template>
 
@@ -87,6 +97,12 @@ export default {
       }
       return "";
     },
+    showShareBtn() {
+      return (
+        this.$route.path === "/recommendations" ||
+        this.$route.path === "/garden"
+      );
+    },
   },
   methods: {
     isActive(currentPath) {
@@ -98,6 +114,15 @@ export default {
         return true;
       }
       return false;
+    },
+    share() {
+      if (this.$route.path === "/recommendations") {
+        this.$refs.view.exportRecList();
+      }
+
+      if (this.$route.path === "/garden") {
+        this.$refs.view.$refs["garden-canvas"].downloadImage();
+      }
     },
   },
 };
