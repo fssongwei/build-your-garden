@@ -8,7 +8,7 @@
         </b-button>
       </div>
       <b-card-img
-        :src="`/img/garden/plants/${plantName}.png`"
+        :src="`/img/garden/plants/${plantName.toLowerCase()}.png`"
         alt="Plant Image"
         style="height: 100px; object-fit: contain"
       ></b-card-img>
