@@ -31,6 +31,7 @@
 // @ is an alias to /src
 import GardenCanvas from "@/components/GardenCanvas.vue";
 import FlowerMascot from "@/components/FlowerMascot.vue";
+import plantData from "@/data/fixtures.json";
 
 export default {
   name: "Garden",
@@ -41,12 +42,13 @@ export default {
   data() {
     return {
       selectedPlant: null,
+      plants: plantData
     };
   },
   computed: {
     plantDescription() {
       if (this.selectedPlant) {
-        return `There will be some description about ${this.selectedPlant}`;
+        return plantData.plantList[this.selectedPlant].description;
       }
       return null;
     },

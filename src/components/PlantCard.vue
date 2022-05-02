@@ -18,7 +18,7 @@
       </b-card-text>
 
       <b-modal :id="`${id}-${plantName}`" :title="plantName" ok-only>
-        <p class="my-4">more plant information...</p>
+        <p class="my-4">{{description}}</p>
       </b-modal>
 
       <div class="number-input">
@@ -58,6 +58,11 @@ export default {
     quant: {
       type: Number,
     },
+  },
+  computed: {
+    description() {
+      return plantData.plantList[this.plantName].description;
+    }
   },
   data() {
     return {
