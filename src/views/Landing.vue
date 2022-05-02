@@ -11,23 +11,21 @@
         </b-col>
       </b-row>
 
-      <b-row class="mx-4">
+      <b-row class="mx-4 my-4">
         <b-col class="text-center">
           <h3>Welcome to [Appname]!</h3>
         </b-col>
       </b-row>
 
-      <b-row class="mx-4">
-        <b-col class="mx-3 text-center">
-          <p style="font-size:20px">[Appname] is a personalized garden planning assistant that uses a Cornell University database to help you create your dream garden! </p>
-          <p style="font-size:20px"> Bring your garden to life through our personalized plant recommendations and garden visualizer.</p>
+      <b-row style="justify-content: center">
+        <b-col class="text-center" cols="9">
+          <p style="font-size:20px">[Appname] is a personalized garden planning assistant that helps you create your dream garden with a Cornell University Playful Plants database! </p>
+          <p style="font-size:20px"> Watch your garden come to life through our personalized plant recommendations and garden visualizer. We hope to make your garden planning process as customized and efffortless as possible!</p>
         </b-col>
       </b-row>
 
-      <b-row class="mx-4">
-        <b-col>
-        </b-col>
-        <b-col class="p-2" cols="auto">
+      <b-row class="mx-5 my-4" style="justify-content: center">
+        <b-col class="text-center">
             <router-link to="/">
               <b-button size="lg" variant="success"> START! </b-button>
             </router-link>
