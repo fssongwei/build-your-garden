@@ -22,7 +22,9 @@
         </b-button>
       </div>
 
-      <flower-mascot :text="plantDescription" />
+      <div class="mb-5">
+        <flower-mascot :text="plantDescription" />
+      </div>
     </div>
   </div>
 </template>
@@ -62,10 +64,10 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap");
 
 .container {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 .footer {
