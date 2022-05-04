@@ -50,7 +50,7 @@ export default {
       if (this.selectedPlant) {
         return plantData.plantList[this.selectedPlant].description;
       }
-      return null;
+      return "Try to click on a plant to see its description or drag to rearrange your garden.";
     },
   },
   methods: {

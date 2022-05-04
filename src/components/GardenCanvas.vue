@@ -75,7 +75,8 @@ export default {
     for (let { name, quantity } of this.recommendations) {
       for (let i = 0; i < quantity; i++) {
         // To make the plants be fixed in the trapezoid garden
-        let y = Math.floor(Math.random() * (height - 100 - plantSize) + 100);
+        let y = Math.floor(Math.random() * (height - 100 - plantSize)) + 100;
+        console.log(y);
         let paddingX = (width - (y + 200)) / 2;
         let range = width - paddingX * 2;
         let x = Math.floor(Math.random() * range) + paddingX;

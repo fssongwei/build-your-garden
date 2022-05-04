@@ -18,14 +18,12 @@
     <div class="container nav-btn-container">
       <div class="swiper-slide nav-btn-group">
         <span>
-          <b-button @click="prev">{{
-            questionId === 1 ? "Last Step" : "←"
-          }}</b-button>
+          <b-button @click="prev">{{ preBtnText }}</b-button>
         </span>
         <span> {{ questionId }} / {{ questions.length }}</span>
         <span>
           <b-button @click="next">{{
-            questionId === questions.length ? "Next Step" : "→"
+            questionId === questions.length ? "Next Step →" : "→"
           }}</b-button>
         </span>
       </div>
@@ -63,6 +61,16 @@ export default {
     },
     isUpdated() {
       return `${this.$route.params.questionId}/${this.$route.params.setId}`;
+    },
+    preBtnText() {
+      if (this.questionId === 1) {
+        if (this.setId === 1) {
+          return "← Home";
+        } else {
+          return `← Step ${this.setId - 1}`;
+        }
+      }
+      return "←";
     },
   },
   methods: {
@@ -156,5 +164,9 @@ export default {
 
 .title {
   margin: 50px 0 50px 0;
+}
+
+button {
+  white-space: nowrap;
 }
 </style>

@@ -19,7 +19,7 @@ export default {
   name: "FlowerMascot",
   data() {
     return {
-      showText: false,
+      showText: true,
     };
   },
   props: {
