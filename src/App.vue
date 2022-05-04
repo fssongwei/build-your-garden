@@ -18,7 +18,7 @@
       ></b-button>
     </b-navbar>
     <div>
-      <b-sidebar id="sidebar-1" title="AppName" shadow>
+      <b-sidebar id="sidebar-1" title="Flory's Garden" shadow>
         <div class="sidebar-list">
           <b-list-group>
             <router-link
