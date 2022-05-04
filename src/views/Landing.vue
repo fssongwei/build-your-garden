@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <!-- TODO: Implement the landing page -->
     <b-container>
       <b-row class="mx-4 my-3" style="display: flex; flex-direction: row; justify-content: center">
         <b-col style="width: 100%; max-width: 30rem;">
@@ -20,7 +19,7 @@
       <b-row style="justify-content: center">
         <b-col cols="9">
           <p style="font-size:20px">Flory's Garden is a personalized garden planning assistant that helps you create your dream garden with a Cornell University Playful Plants database! </p>
-          <p style="font-size:20px"> Watch your garden come to life through our personalized plant recommendations and garden visualizer. We hope to make your garden planning process as customized and efffortless as possible!</p>
+          <p style="font-size:20px"> Watch your garden come to life through our personalized plant recommendations and garden visualizer. We hope to make your garden planning process as customized and effortless as possible!</p>
         </b-col>
       </b-row>
 
@@ -47,11 +46,14 @@ export default {
 };
 </script>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
+
 .container {
   max-width: 500px;
   min-width: 300px;
   max-height: 633px;
   min-height: 400px;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .card-img-right {

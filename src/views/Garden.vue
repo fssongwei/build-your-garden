@@ -62,6 +62,12 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
+
+.container {
+  font-family: 'Quicksand', sans-serif;
+}
+
 .footer {
   position: fixed;
   left: 0;

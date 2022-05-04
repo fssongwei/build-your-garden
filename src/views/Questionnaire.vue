@@ -125,8 +125,11 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
+
 .swiper-container {
   margin-top: 5em;
+  font-family: 'Quicksand', sans-serif;
 }
 /* @media screen and (min-width: 576px) {
   .swiper-slide:not(:last-child) {
@@ -142,6 +145,7 @@ export default {
 .nav-btn-container {
   display: flex;
   justify-content: center;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .nav-btn-group {

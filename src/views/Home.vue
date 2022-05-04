@@ -66,6 +66,7 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
 .circle-btn {
   width: 88px;
   height: 90px;
@@ -93,6 +94,7 @@ export default {
   max-width: 550px;
   margin: 0 auto;
   padding: 80px 50px;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .row-left {
