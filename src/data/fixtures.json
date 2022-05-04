@@ -2,7 +2,7 @@
     "plantList": {
         "Yarrow": {
             "name": "Yarrow",
-            "descripion": "As with most herbs, full sunlight is best. Plant it in a large pot on a very sunny patio and monitor the water situation carefully. Monitor and cut back as necessary to prevent spreading.",
+            "description": "As with most herbs, full sunlight is best. Plant it in a large pot on a very sunny patio and monitor the water situation carefully. Monitor and cut back as necessary to prevent spreading.",
             "image": "@/plantImages/yarrow.png",
             "edible": "Yes",
             "scent": "Fragrant",
@@ -11,7 +11,7 @@
         },
         "Thyme": {
             "name": "Thyme",
-            "descripion": "Plant thyme in spring once chances of frost have passed. Space thyme plants 12 to 24 inches apart in a very sunny area with fertile, well-drained soil with a pH close to 7.0. For best results, feed regularly with a water-soluble plant food. Keep soil moist and water when the top inch of soil becomes dry.",
+            "description": "Plant thyme in spring once chances of frost have passed. Space thyme plants 12 to 24 inches apart in a very sunny area with fertile, well-drained soil with a pH close to 7.0. For best results, feed regularly with a water-soluble plant food. Keep soil moist and water when the top inch of soil becomes dry.",
             "image": "@/plantImages/thyme.png",
             "edible": "Yes",
             "scent": "Fragrant",
@@ -20,7 +20,7 @@
         },
         "Primrose": {
             "name": "Primrose",
-            "descripion": "Primrose perennials should be planted in lightly shaded areas with well-drained soil, preferably amended with organic matter. Set primrose plants about 6 to 12 inches (15-30 cm.) apart and 4 to 6 inches (10-15 cm.) deep. Water thoroughly after planting.",
+            "description": "Primrose perennials should be planted in lightly shaded areas with well-drained soil, preferably amended with organic matter. Set primrose plants about 6 to 12 inches (15-30 cm.) apart and 4 to 6 inches (10-15 cm.) deep. Water thoroughly after planting.",
             "image": "@/plantImages/primrose.png",
             "edible": "Yes",
             "scent": "Fragrant",
@@ -29,11 +29,47 @@
         },
         "Columbine": {
             "name": "Columbine",
-            "descripion": "Only weekly watering is necessary with exception to extended periods of drought in which they will require additional watering. Provide a water-soluble fertilizer monthly. Regular fertilizing will help produce brighter blooms and thicker foliage. Regular deadheading can also be performed to encourage additional blooming.",
+            "description": "Only weekly watering is necessary with exception to extended periods of drought in which they will require additional watering. Provide a water-soluble fertilizer monthly. Regular fertilizing will help produce brighter blooms and thicker foliage. Regular deadheading can also be performed to encourage additional blooming.",
             "image": "@/plantImages/columbine.png",
             "edible": "Yes",
             "scent": "N/A",
             "color": "Purple and white",
+            "cost": "Inexpensive"
+        },
+        "Lungwort": {
+            "name": "Lungwort",
+            "description": "These plants do best in shady, moist (but not swampy) locations. While the plant does best in moist locations, it can survive in drier locations if enough shade is provided. Because of this, consider growing lungwort under trees where other plants may have a hard time competing with the roots of the tree for water.",
+            "image": "@/plantImages/lungwort.png",
+            "edible": "No",
+            "scent": "N/A",
+            "color": "Blue, pink, white",
+            "cost": "Inexpensive"
+        },
+        "Switchgrass": {
+            "name": "Switchgrass",
+            "description": "Place the plant to the rear or edges of a garden bed so it does not cover up smaller plants. The spread is also a consideration, but as a clumping variety, switchgrass is never more than half as wide as it is tall. Plant switchgrass in a group spaced at least 12 inches (31 cm.) apart and they will grow together to make an interesting moving screen.",
+            "image": "@/plantImages/swithgrass.png",
+            "edible": "No",
+            "scent": "N/A",
+            "color": "Green",
+            "cost": "Inexpensive"
+        },
+        "Spearmint": {
+            "name": "Spearmint",
+            "description": "Spearmint is a hardy perennial that grows best in partial shade with well-draining, rich, moist soil and a pH of 6.5 to 7. Mint is easiest to grow from plants, but you can sow seed once the ground has warmed in the spring. Keep seeds moist until they germinate and thin plants to 1 foot apart.",
+            "image": "@/plantImages/spearmint.png",
+            "edible": "Yes",
+            "scent": "Strong mint fragrance",
+            "color": "Green",
+            "cost": "Inexpensive"
+        },
+        "Feverfew": {
+            "name": "Feverfew",
+            "description": "Sprinkle a few seeds into the pot. Spray water to keep the seeds moist as poured water may dislodge the seeds. When the plants are about 3 inches (7.5 cm.) tall, plant them, pot and all, into a sunny garden spot and water regularly until the roots take hold.",
+            "image": "@/plantImages/feverfew.png",
+            "edible": "Yes",
+            "scent": "Strong citrus scent",
+            "color": "White",
             "cost": "Inexpensive"
         }
 
