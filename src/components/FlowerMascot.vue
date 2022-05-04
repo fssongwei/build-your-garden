@@ -32,25 +32,27 @@ export default {
   methods: {
     toggleText() {
       if (!this.text) return;
-      if (!this.showText) {
-        this.showText = true;
-        setTimeout(() => {
-          this.showText = false;
-        }, 5000);
-      } else {
-        this.showText = !this.showText;
-      }
+      this.showText = !this.showText;
+      // if (!this.showText) {
+      //   this.showText = true;
+      //   setTimeout(() => {
+      //     this.showText = false;
+      //   }, 5000);
+      // } else {
+      //   this.showText = !this.showText;
+      // }
     },
   },
   watch: {
     text(newText) {
       if (!newText) return;
-      if (!this.showText) {
-        this.showText = true;
-        setTimeout(() => {
-          this.showText = false;
-        }, 5000);
-      }
+      if (!this.showText) this.showText = true;
+      // if (!this.showText) {
+      //   this.showText = true;
+      //   setTimeout(() => {
+      //     this.showText = false;
+      //   }, 5000);
+      // }
     },
   },
 };
