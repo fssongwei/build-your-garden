@@ -94,6 +94,8 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
+
 @media screen and (max-width: 992px) {
   .info-btn-text {
     display: none;
@@ -118,5 +120,9 @@ export default {
 .number-input button {
   font-weight: 900;
   font-family: "Courier New", Courier, monospace;
+}
+
+.my-4 {
+  font-family: 'Quicksand', sans-serif;
 }
 </style>
