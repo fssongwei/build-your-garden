@@ -13,13 +13,13 @@
 
       <b-row class="mx-4 my-4">
         <b-col class="text-center">
-          <h3>Welcome to [Appname]!</h3>
+          <h3>Welcome to Flory's Garden!</h3>
         </b-col>
       </b-row>
 
       <b-row style="justify-content: center">
-        <b-col class="text-center" cols="9">
-          <p style="font-size:20px">[Appname] is a personalized garden planning assistant that helps you create your dream garden with a Cornell University Playful Plants database! </p>
+        <b-col cols="9">
+          <p style="font-size:20px">Flory's Garden is a personalized garden planning assistant that helps you create your dream garden with a Cornell University Playful Plants database! </p>
           <p style="font-size:20px"> Watch your garden come to life through our personalized plant recommendations and garden visualizer. We hope to make your garden planning process as customized and efffortless as possible!</p>
         </b-col>
       </b-row>
@@ -48,8 +48,8 @@ export default {
 </script>
 <style>
 .container {
-  max-width: 640px;
-  min-width: 292px;
+  max-width: 500px;
+  min-width: 300px;
   max-height: 633px;
   min-height: 400px;
 }
