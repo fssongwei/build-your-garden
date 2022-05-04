@@ -5,7 +5,7 @@
     <div class="row-left">
       <div class="step-btn-group">
         <button class="circle-btn" @click="$router.push('/questions/set1/1')">
-          <span>Step</span><span>1</span>
+          <span>Step1</span>
         </button>
         <span>Plant Traits</span>
       </div>
@@ -18,7 +18,7 @@
     <div class="row-right">
       <div class="step-btn-group">
         <button class="circle-btn" @click="$router.push('/questions/set2/1')">
-          <span>Step</span><span>2</span>
+          <span>Step2</span>
         </button>
         <span>Garden Logistics</span>
       </div>
@@ -31,7 +31,7 @@
     <div class="row-left">
       <div class="step-btn-group">
         <button class="circle-btn" @click="$router.push('/recommendations')">
-          <span>Step</span><span>3</span>
+          <span>Step3</span>
         </button>
         <span>See Plant List</span>
       </div>
@@ -44,7 +44,7 @@
     <div class="row-right">
       <div class="step-btn-group">
         <button class="circle-btn" @click="$router.push('/garden')">
-          <span>Step</span><span>4</span>
+          <span>Step4</span>
         </button>
         <span>See Your Garden</span>
       </div>
@@ -67,15 +67,17 @@ export default {
 
 <style>
 .circle-btn {
-  width: 80px;
-  height: 80px;
-  font-size: 18px;
-  border-radius: 50%;
+  width: 88px;
+  height: 90px;
+  font-size: 16px;
+  /* border-radius: 50%; */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: #0dcaf0;
+  background-image: url(/img/yellowflower.png);
+  background-size:contain;
+  /* background: #0dcaf0; */
   border: none;
 }
 
