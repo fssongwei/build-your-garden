@@ -42,7 +42,7 @@ export default {
   data() {
     return {
       selectedPlant: null,
-      plants: plantData
+      plants: plantData,
     };
   },
   computed: {

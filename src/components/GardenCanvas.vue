@@ -13,7 +13,7 @@
           @click="handleClick(plant.name)"
           :key="index"
           :config="{
-            image: plantImages[plant.name],
+            image: plantImages[plant.name.toLowerCase()],
             x: plant.x,
             y: plant.y,
             width: plantSize,
@@ -52,6 +52,8 @@ export default {
       this.recommendations = JSON.parse(storedRecList);
     }
 
+    console.log(this.recommendations);
+
     const bg = new window.Image();
     bg.src = "/img/garden/gardenbg.jpg";
     bg.onload = () => {
@@ -72,9 +74,13 @@ export default {
     let list = [];
     for (let { name, quantity } of this.recommendations) {
       for (let i = 0; i < quantity; i++) {
-        let x = Math.floor(Math.random() * (width - plantSize));
-        let y = Math.floor(Math.random() * (height - 200 - plantSize) + 200);
-        list.push({ x, y, name: name.toLowerCase() });
+        // To make the plants be fixed in the trapezoid garden
+        let y = Math.floor(Math.random() * (height - 100 - plantSize) + 100);
+        let paddingX = (width - (y + 200)) / 2;
+        let range = width - paddingX * 2;
+        let x = Math.floor(Math.random() * range) + paddingX;
+        if (x < 0) x = 0;
+        list.push({ x, y, name });
       }
     }
     this.list = list;

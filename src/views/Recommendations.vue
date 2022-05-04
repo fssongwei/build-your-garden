@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <b-row class="my-2">
+    <b-row class="mt-2" style="margin-bottom: 150px">
       <b-col
         v-for="plant in recommendations"
         :key="plant.id"
