@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <b-row class="mt-2" style="margin-bottom: 150px">
+    <b-row class="mt-2" style="padding-bottom: 300px">
       <b-col
         v-for="plant in recommendations"
         :key="plant.id"
@@ -183,10 +183,10 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap");
 
 .container {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 .footer {
