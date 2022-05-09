@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <b-container>
       <b-row class="mx-4 my-3" style="display: flex; flex-direction: row; justify-content: center">
         <b-col style="width: 100%; max-width: 30rem;">
           <b-card class="text-center" img-src="img/icons/flowermascot.png" img-alt="mascot image" img-right>
@@ -31,7 +30,6 @@
         </b-col>
       </b-row>
 
-    </b-container>
   </div>
 </template>
 
@@ -48,13 +46,13 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
 
-.container {
+/* .container {
   max-width: 500px;
   min-width: 300px;
   max-height: 633px;
   min-height: 400px;
   font-family: 'Quicksand', sans-serif;
-}
+} */
 
 .card-img-right {
  max-width: 15rem;
