@@ -55,7 +55,7 @@
           ></b-form-select>
           <b-card-img
             v-if="selectedPlant"
-            :src="`/img/garden/plants/${selectedPlant}.png`"
+            :src="`/img/garden/plants/${selectedPlant.toLowerCase()}.png`"
             alt="Plant Image"
             style="height: 100px; object-fit: contain"
           ></b-card-img>
