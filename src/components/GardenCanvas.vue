@@ -11,6 +11,7 @@
         <v-image
           v-for="(plant, index) in list"
           @click="handleClick(plant.name)"
+          @tap="handleClick(plant.name)"
           :key="index"
           :config="{
             image: plantImages[plant.name.toLowerCase()],

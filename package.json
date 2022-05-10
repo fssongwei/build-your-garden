@@ -39,7 +39,7 @@
       "name": "Flory's Garden",
       "appleMobileWebAppCapable": "yes",
       "appleMobileWebAppStatusBarStyle": "black-transculent",
-      "themeColor": "#FFFFFF"
+      "themeColor": "#f8f9fa"
     }
   }
 }
