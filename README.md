@@ -1,5 +1,7 @@
 # goal-diggers-project
 
+Link to PWA: https://flory-garden.herokuapp.com
+
 ## Project setup
 ```
 npm install
