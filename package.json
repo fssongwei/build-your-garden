@@ -36,7 +36,10 @@
   },
   "vue": {
     "pwa": {
-      "name": "Flory's Garden"
+      "name": "Flory's Garden",
+      "appleMobileWebAppCapable": "yes",
+      "appleMobileWebAppStatusBarStyle": "black-transculent",
+      "themeColor": "#FFFFFF"
     }
   }
 }
