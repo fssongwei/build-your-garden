@@ -52,8 +52,6 @@ export default {
       this.recommendations = JSON.parse(storedRecList);
     }
 
-    console.log(this.recommendations);
-
     const bg = new window.Image();
     bg.src = "/img/garden/gardenbg.jpg";
     bg.onload = () => {
@@ -127,6 +125,6 @@ export default {
 .garden-canvas-container {
   width: 100%;
   max-width: 800px;
-  margin: 50px auto;
+  margin: 0 auto;
 }
 </style>

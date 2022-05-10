@@ -4,12 +4,7 @@
     <div class="text-box" v-show="showText">
       {{ text }}
     </div>
-    <img
-      src="@/data/flowermascot.png"
-      style="max-width: 250px; height: auto"
-      id="mascot"
-      @click="toggleText"
-    />
+    <img src="@/data/flowermascot.png" id="mascot" @click="toggleText" />
     <!-- Flowermascot Citation: self-drawn -->
   </div>
 </template>
@@ -61,13 +56,31 @@ export default {
 <style scoped>
 .mascot-container {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+}
+
+.mascot-container img {
+  max-width: 200px;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .mascot-container img {
+    max-width: 150px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .mascot-container img {
+    max-width: 100px;
+    height: auto;
+  }
 }
 
 .text-box {
   border: 1px solid black;
   border-radius: 5px;
   padding: 10px;
-  margin-top: 30px;
 }
 </style>

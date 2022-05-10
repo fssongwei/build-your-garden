@@ -1,30 +1,29 @@
 <template>
   <div class="container">
-    <garden-canvas
-      @click-plant="handlePlantClick"
-      ref="garden-canvas"
-    ></garden-canvas>
+    <div class="py-2 py-lg-3 py-xl-5">
+      <garden-canvas
+        @click-plant="handlePlantClick"
+        ref="garden-canvas"
+      ></garden-canvas>
+    </div>
 
     <div
-      class="d-flex justify-content-end align-items-end px-lg-5 px-md-4 px-3 py-4 position-relative"
+      class="d-flex justify-content-end align-items-end position-relative flower-mascot"
       style="z-index: -1; box-sizing: border-box"
     >
-      <div
-        class="position-absolute"
-        style="bottom: 0; left: 0; padding: inherit"
-      >
-        <b-button
-          size="lg"
-          variant="primary"
-          @click="$router.push('/recommendations')"
-        >
-          &lt; See List
-        </b-button>
-      </div>
+      <flower-mascot :text="plantDescription" />
+    </div>
 
-      <div class="mb-5">
-        <flower-mascot :text="plantDescription" />
-      </div>
+    <div
+      class="d-flex justify-content-start align-items-center footer px-lg-5 px-md-4 px-3 py-4"
+    >
+      <b-button
+        size="lg"
+        variant="primary"
+        @click="$router.push('/recommendations')"
+      >
+        &lt; See List
+      </b-button>
     </div>
   </div>
 </template>
@@ -76,5 +75,9 @@ export default {
   bottom: 0;
   width: 100%;
   text-align: center;
+}
+
+.flower-mascot {
+  margin-bottom: 100px;
 }
 </style>
